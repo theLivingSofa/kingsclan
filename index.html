@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>King Albums</title>
+    <link rel="icon" type="image/x-icon" href="/logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Albums</h2>
+            <ul id="album-list"></ul>
+        </div>
+
+        <!-- Main Player Section -->
+        <div class="player">
+            <img src="logo.jpeg" class="logo"><br><br><br><br>
+            <img id="album-cover" class="cover" src="" alt="Album Cover">
+            <h1 id="track-title">Track Name</h1>
+
+            <audio id="audio-player"></audio>
+            
+            <div class="controls">
+                <button id="prev" aria-label="Previous Track">&#x23EE;</button>
+                <div class="play-pause-container">
+                    <button id="play-pause" aria-label="Play/Pause">&#x23EF;</button>
+                </div>
+                <button id="next" aria-label="Next Track">&#x23ED;</button>
+            </div>
+
+            <div class="progress-container">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" min="0" value="0" step="1" aria-label="Progress Bar">
+                <span id="total-duration">0:00</span>
+            </div>
+
+            <div class="volume-container">
+                <span id="volume-icon">&#x1F508;</span>
+                <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1" aria-label="Volume Control">
+            </div>
+            
+            <div class="track-list">
+                <h3>All Tracks</h3>
+                <ul id="track-list"></ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
