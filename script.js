@@ -197,6 +197,15 @@ function playTrack(index) {
     });
 }
 
+audioPlayer.addEventListener("ended", () => {
+    currentTrackIndex++;
+    if (currentTrackIndex >= albums[currentAlbumIndex].tracks.length) {
+        currentTrackIndex = 0; // Loop back to first track if needed
+    }
+    playTrack(currentTrackIndex);
+});
+
+
 // Play/Pause Toggle
 playPauseBtn.addEventListener('click', () => {
     if (audioPlayer.paused) {
