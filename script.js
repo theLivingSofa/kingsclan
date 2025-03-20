@@ -214,6 +214,11 @@ audioPlayer.addEventListener("ended", () => {
     playTrack(currentTrackIndex);
 });
 
+document.getElementById("secret-btn").addEventListener("click", () => {
+    albums.push(secretAlbum); // Add secret album to the albums list
+    loadAlbum(albums.length - 1); // Load and play the secret album
+});
+
 
 // Play/Pause Toggle
 playPauseBtn.addEventListener('click', () => {
