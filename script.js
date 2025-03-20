@@ -99,6 +99,41 @@ const albums = [
     }
 ];
 
+const secretAlbum = {
+    name: "Secret Album",
+    cover: "albums/secret/cover.png",
+    tracks: [
+        { title: "Hidden Gem 1", src: "albums/secret/track1.mp3" },
+        { title: "Hidden Gem 2", src: "albums/secret/track2.mp3" },
+        { title: "Hidden Gem 3", src: "albums/secret/track3.mp3" },
+        { title: "Hidden Gem 4", src: "albums/secret/track4.mp3" },
+        { title: "Hidden Gem 5", src: "albums/secret/track5.mp3" },
+        { title: "Hidden Gem 6", src: "albums/secret/track6.mp3" },
+        { title: "Hidden Gem 7", src: "albums/secret/track7.mp3" },
+        { title: "Hidden Gem 8", src: "albums/secret/track8.mp3" },
+        { title: "Hidden Gem 9", src: "albums/secret/track9.mp3" },
+        { title: "Hidden Gem 10", src: "albums/secret/track10.mp3" },
+        { title: "Hidden Gem 11", src: "albums/secret/track11.mp3" },
+        { title: "Hidden Gem 12", src: "albums/secret/track12.mp3" },
+        { title: "Hidden Gem 13", src: "albums/secret/track13.mp3" },
+        { title: "Hidden Gem 14", src: "albums/secret/track14.mp3" },
+        { title: "Hidden Gem 15", src: "albums/secret/track15.mp3" },
+        { title: "Hidden Gem 16", src: "albums/secret/track16.mp3" },
+        { title: "Hidden Gem 17", src: "albums/secret/track17.mp3" },
+        { title: "Hidden Gem 18", src: "albums/secret/track18.mp3" },
+        { title: "Hidden Gem 19", src: "albums/secret/track19.mp3" },
+        { title: "Hidden Gem 20", src: "albums/secret/track20.mp3" },
+        { title: "Hidden Gem 21", src: "albums/secret/track21.mp3" },
+        { title: "Hidden Gem 22", src: "albums/secret/track22.mp3" },
+        { title: "Hidden Gem 23", src: "albums/secret/track23.mp3" },
+        { title: "Hidden Gem 24", src: "albums/secret/track24.mp3" },
+        { title: "Hidden Gem 25", src: "albums/secret/track25.mp3" },
+        { title: "Hidden Gem 26", src: "albums/secret/track26.mp3" },
+        { title: "Hidden Gem 27", src: "albums/secret/track27.mp3" }
+    ]
+};
+
+
 const albumList = document.getElementById('album-list');
 const trackList = document.getElementById('track-list');
 const albumCover = document.getElementById('album-cover');
