@@ -2,7 +2,8 @@
 body {
     background: #000;
     color: white;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
+    font-family: "Exo 2", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,12 +224,19 @@ h3, h4 {
 
 /* Track List */
 .track-list {
+    /* margin-top: 20px; */
+
     margin-top: 20px;
+    max-height: 270px; /* Adjust height as needed */
+    overflow-y: auto; /* Enables vertical scrollbar when needed */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: red black; /* Custom scrollbar colors */
 }
 
 .track-list ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .track-list li {
@@ -253,4 +261,17 @@ h3, h4 {
     background: red; /* Highlight color */
     font-weight: bold; /* Optional: Make the text bold */
     color: white; /* Optional: Change text color for better contrast */
+}
+
+.track-list::-webkit-scrollbar {
+    width: 8px; /* Scrollbar width */
+}
+
+.track-list::-webkit-scrollbar-thumb {
+    background: red; /* Scrollbar handle color */
+    border-radius: 4px;
+}
+
+.track-list::-webkit-scrollbar-track {
+    background: black; /* Scrollbar track color */
 }
