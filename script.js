@@ -214,10 +214,64 @@ audioPlayer.addEventListener("ended", () => {
     playTrack(currentTrackIndex);
 });
 
-document.getElementById("secret-btn").addEventListener("click", () => {
-    albums.push(secretAlbum); // Add secret album to the albums list
-    loadAlbum(albums.length - 1); // Load and play the secret album
+// document.getElementById("secret-btn").addEventListener("click", () => {
+//     albums.push(secretAlbum); // Add secret album to the albums list
+//     loadAlbum(albums.length - 1); // Load and play the secret album
+// });
+
+// Secret Album Access
+document.addEventListener("DOMContentLoaded", function () {
+    const secretBtn = document.getElementById("secret-btn");
+
+    // Precomputed SHA-256 hash for "mypassword"
+    const hashedPassword = "5087ccaaed91cb9aa18f98aa6a9893d241cf5e8e4c6be3cc15c680e90f605caf"; 
+    const pwd = "discord2019";
+    function hashInput(input) {
+        return crypto.subtle.digest("SHA-256", new TextEncoder().encode(input)).then(buffer => {
+            return Array.from(new Uint8Array(buffer)).map(byte => byte.toString(16).padStart(2, "0")).join("");
+        });
+    }
+    
+    secretBtn.addEventListener("click", async function () {
+        if (sessionStorage.getItem("secretAccess") === "true") {
+            unlockSecretAlbum();
+            return;
+        }
+
+        const password = prompt("Enter the password for Secret Playlist:");
+        if (!password) return;
+
+        //const hashedInput = await hashInput(password);
+
+        // if (hashedInput === hashedPassword) 
+        if (password === pwd){
+            alert("Access Granted!");
+            sessionStorage.setItem("secretAccess", "true");
+            unlockSecretAlbum();
+        } else {
+            alert("Access Denied! Incorrect password.");
+        }
+    });
+
+    function unlockSecretAlbum() {
+        albums.push(secretAlbum); // Add secret album to albums list
+        loadAlbum(albums.length - 1); // Load secret album
+    }
+
+    // Check if access is already granted
+    if (sessionStorage.getItem("secretAccess") === "true") {
+        unlockSecretAlbum();
+    }
 });
+
+document.addEventListener("contextmenu", event => event.preventDefault());
+document.addEventListener("keydown", function (event) {
+    if (event.ctrlKey && (event.key === "u" || event.key === "s" || event.key === "i" || event.key === "j" || event.key === "c")) {
+        event.preventDefault();
+    }
+});
+
+
 
 
 // Play/Pause Toggle
