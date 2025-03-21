@@ -95,6 +95,7 @@ const albums = [
             { title: 'Teri Ho Na Saki', src: 'albums/album6/track6.mp3' },
             { title: "Alpha's Goodbye", src: 'albums/album6/track7.mp3' },
             { title: 'Till The End', src: 'albums/album6/track8.mp3' },
+            { title: 'Stay', src: 'albums/album6/track9.mp3' },
         ]
     }
 ];
