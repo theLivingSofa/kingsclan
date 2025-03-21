@@ -297,6 +297,7 @@ prevBtn.addEventListener('click', () => {
     playTrack(currentTrackIndex);
 });
 
+
 // Progress Bar
 audioPlayer.addEventListener('timeupdate', () => {
     const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
@@ -308,6 +309,28 @@ progressBar.addEventListener('input', () => {
     const seekTime = (progressBar.value / 100) * audioPlayer.duration;
     audioPlayer.currentTime = seekTime;
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const audioPlayer = document.getElementById("audio-player");
+    const progressBar = document.getElementById("progress-bar");
+
+    function updateProgressBar() {
+        if (audioPlayer.duration) {
+            const percentage = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progressBar.style.setProperty("--progress-fill", `${percentage}%`);
+        }
+        requestAnimationFrame(updateProgressBar); // Ensures smooth animation
+    }
+
+    audioPlayer.addEventListener("play", updateProgressBar); // Start updating when audio plays
+
+    // Seek to a new position in the track when the user moves the slider
+    progressBar.addEventListener("input", (event) => {
+        const seekTime = (event.target.value / 100) * audioPlayer.duration;
+        audioPlayer.currentTime = seekTime;
+    });
+});
+
 
 // Volume Control
 volumeControl.addEventListener('input', () => {
