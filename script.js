@@ -206,15 +206,6 @@ audioPlayer.addEventListener("ended", () => {
     playTrack(currentTrackIndex);
 });
 
-
-audioPlayer.addEventListener("ended", () => {
-    currentTrackIndex++;
-    if (currentTrackIndex >= albums[currentAlbumIndex].tracks.length) {
-        currentTrackIndex = 0; // Loop back to first track if needed
-    }
-    playTrack(currentTrackIndex);
-});
-
 // document.getElementById("secret-btn").addEventListener("click", () => {
 //     albums.push(secretAlbum); // Add secret album to the albums list
 //     loadAlbum(albums.length - 1); // Load and play the secret album
