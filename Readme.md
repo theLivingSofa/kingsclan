@@ -23,7 +23,28 @@ A simple, self-contained web-based music player designed to play predefined albu
 
 The project relies on the following file structure:
 
-[File Structure](image.png)
+<img width="594" alt="image" src="https://github.com/user-attachments/assets/7d9b225c-e014-400c-8949-3451f61b9900" />
+
+* **Important:** You must create the `albums/` directory and populate it with the subdirectories, cover images (`cover.jpeg`, `cover.webp`, `cover.jpg`, `cover.png`), and MP3 files exactly as referenced in the `albums` and `secretPlaylists` arrays within `script.js`.
+
+## 🚀 Usage
+
+1.  **Prepare Files:** Ensure the `albums/` directory is created and contains all the necessary audio files and cover images with the correct filenames as specified in `script.js`. Place `logo.jpeg` in the root directory alongside `index.html`.
+2.  **Open:** Simply open the `index.html` file in a modern web browser that supports HTML5 audio. No web server is required for basic playback if files are local.
+
+## 🔐 Secret Playlist
+
+A hidden playlist can be accessed:
+1.  Locate the password input field and "Unlock Playlist" button at the bottom of the player.
+2.  Enter the correct secret code (Hint: It's defined as a key in the `secretPlaylists` object in `script.js`).
+3.  Click the "Unlock Playlist" button. The secret tracks will load.
+
+## 🔧 Customization
+
+You can modify the music content by:
+* Editing the `albums` array in `script.js` to add, remove, or change albums, tracks, cover paths, and audio source paths.
+* Editing the `secretPlaylists` object in `script.js` to change the unlock code(s) or the tracks within the secret lists.
+* Replacing the audio/image files in the `albums/` directory accordingly.
 
 * **Important:** You must create the `albums/` directory and populate it with the subdirectories, cover images (`cover.jpeg`, `cover.webp`, `cover.jpg`, `cover.png`), and MP3 files exactly as referenced in the `albums` and `secretPlaylists` arrays within `script.js`.
 
