@@ -1,6 +1,6 @@
 # King Albums Music Player 🎧
 
-A simple, self-contained web-based music player designed to play predefined albums and tracks, featuring music likely by the artist King. It includes standard playback controls and a feature to unlock a secret playlist with a code.
+A simple, self-contained web-based music player designed to play predefined albums and tracks, featuring music by the artist King. It includes standard playback controls and a feature to unlock a secret playlist with a code.
 
 ## ✨ Features
 
