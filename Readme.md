@@ -1,6 +1,8 @@
 # King Albums Music Player 🎧
 
-A simple, self-contained web-based music player designed to play predefined albums and tracks, featuring music by the artist King. #Kingsclan4Life
+A simple, self-contained web-based music player designed to play predefined albums and tracks, featuring music by the artist King. 
+
+# KingsClan4Life
 
 ## ✨ Features
 
